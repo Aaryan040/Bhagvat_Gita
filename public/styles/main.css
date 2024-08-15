@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+}
+
+.navbar ul {
+    display: flex; /* Add this line */
+    list-style: none;
+    padding: 40px 0px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px;
+    padding: 0px 20px;
+}
+
+.navbar ul li a:hover{
+    color: gray;
+}
+
+.container{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("https://www.atmatattva.com/wp-content/uploads/2015/04/gita-01.jpg") no-repeat center center/cover;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+h1{
+    margin: 0px auto;
+    padding: 10px 20px;
+    font-size: 50px;
+}
+
+label{
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+input{
+    margin: 10px auto;
+    padding: 5px 20px;
+    font-size: 15px;
+}
+
+button{
+    display: block;
+    margin: 10px auto;
+    font-size: 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+button:hover{
+    color: black;
+    background-color: grey;
+    border-color: black;
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px solid black;
+    border-radius: 30px;
+    background-color: antiquewhite;
+    padding: 20px 30px;
+    margin: 20px 30px;
+}
+
+.items{
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.key{
+    padding: 10px 0px;
+}
+
+span{
+    font-size: 20px;
+    color: red;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+}

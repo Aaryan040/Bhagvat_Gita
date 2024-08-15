@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+
+    <section class="container">
+        <h1 class="text">Bhagavad Gita Chapters verse</h1>
+        <form action="/verse">
+            <div>
+                <label for="chapter">Chapter</label>
+                <input type="number" name="chapter" id="">
+            </div>
+            <div>
+                <label for="verse">Verse</label>
+                <input type="number" name="verse" id="">
+            </div>
+            <button type="submit">Go</button>
+        </form>
+        <% if(locals.illustration){ %>
+            <div class="result">
+                <div class="items"><span>Id: </span><%= illustration.id %></div>
+                <div class="items"><span>Verse number: </span><%= illustration.verse_number %></div>
+                <div class="items"><span>Chapter number: </span><%= illustration.chapter_number %></div>
+                <div class="items"><span>Text: </span><%= illustration.text %></div>
+                <div class="items">
+                    <span>Translations</span>
+                    <% for(var i = 0; i<illustration.translations.length; i++){ %>
+                        <div class="key">
+                            <div><span>Id: </span><%= illustration.translations[i].id %></div>
+                            <div><span>Description: </span><%= illustration.translations[i].description %></div>
+                            <div><span>Author name: </span><%= illustration.translations[i].author_name %></div>
+                            <div><span>Language: </span><%= illustration.translations[i].language %></div>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="items">
+                    <span>Commentaries</span>
+                    <% for(var i = 0; i<illustration.commentaries.length; i++){ %>
+                        <div class="key">
+                            <div><span>Id: </span><%= illustration.commentaries[i].id %></div>
+                            <div><span>Description: </span><%= illustration.commentaries[i].description %></div>
+                            <div><span>Author name: </span><%= illustration.commentaries[i].author_name %></div>
+                            <div><span>Language: </span><%= illustration.commentaries[i].language %></div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+    </section>
+
+<%- include('partials/footer.ejs') %>

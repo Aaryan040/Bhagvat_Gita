@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>
+
+    <section class="container">
+        <h1 class="text">Bhagavad Gita Chapters Summary</h1>
+        <form action="/submit">
+            <div>
+                <label for="chapter">Chapter</label>
+                <input type="number" name="chapter" id="">
+            </div>
+            <button type="submit">Go</button>
+        </form>
+        <% if(locals.illustration){ %>
+            <div class="result">
+                <div class="items"><span>Id: </span><%= illustration.id %></div>
+                <div class="items"><span>Name: </span><%= illustration.name %></div>
+                <div class="items"><span>Transliterated name: </span><%= illustration.name_transliterated %></div>
+                <div class="items"><span>Translated name: </span><%= illustration.name_translated %></div>
+                <div class="items"><span>Versus: </span><%= illustration.verses_count %></div>
+                <div class="items"><span>Chapter: </span><%= illustration.chapter_number %></div>
+                <div class="items"><span>Name meaning: </span><%= illustration.name_meaning %></div>
+                <div class="items"><span>Chapter summary: </span><%= illustration.chapter_summary %></div>
+                <div class="items"><span>Chapter summary hindi: </span><%= illustration.chapter_summary_hindi %></div>
+            </div>
+        <% } %>
+    </section>
+
+<%- include('partials/footer.ejs') %>
